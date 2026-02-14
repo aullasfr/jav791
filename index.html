@@ -18,13 +18,13 @@ scroll-behavior:smooth;
 
 body{
 background:
-radial-gradient(circle at 15% 20%, rgba(120,0,0,0.25), transparent 40%),
-radial-gradient(circle at 85% 80%, rgba(255,80,0,0.15), transparent 40%),
-#05060f;
+radial-gradient(circle at 20% 20%, rgba(0,255,120,0.15), transparent 40%),
+radial-gradient(circle at 80% 80%, rgba(0,200,100,0.12), transparent 40%),
+#060b12;
 color:white;
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
 display:flex;
@@ -34,6 +34,7 @@ padding:20px 80px;
 position:sticky;
 top:0;
 backdrop-filter:blur(14px);
+z-index:1000;
 }
 
 .logo{
@@ -48,10 +49,6 @@ width:40px;
 border-radius:50%;
 }
 
-.logo span{
-font-weight:700;
-}
-
 .nav-links{
 display:flex;
 gap:40px;
@@ -59,30 +56,30 @@ list-style:none;
 }
 
 .nav-links a{
-color:#d0d0d0;
+color:#cfcfcf;
 text-decoration:none;
 transition:0.3s;
 }
 
 .nav-links a:hover{
-color:#ff5c3a;
+color:#00ff99;
 }
 
 .join-btn{
-background:linear-gradient(90deg,#ff4d4d,#ff7a3d);
+background:linear-gradient(90deg,#00ff99,#00c870);
 border:none;
 padding:10px 20px;
 border-radius:8px;
-color:white;
 font-weight:600;
 cursor:pointer;
+color:black;
 }
 
 /* HERO */
 
 .hero{
 text-align:center;
-padding:140px 20px 100px;
+padding:150px 20px 80px;
 }
 
 .hero h1{
@@ -91,7 +88,7 @@ font-weight:800;
 }
 
 .highlight{
-background:linear-gradient(90deg,#ff4d4d,#ff7a3d);
+background:linear-gradient(90deg,#00ff99,#00c870);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -99,6 +96,73 @@ background:linear-gradient(90deg,#ff4d4d,#ff7a3d);
 .hero p{
 margin-top:20px;
 color:#cfcfcf;
+}
+
+/* SERVER CARD */
+
+.server-card{
+width:650px;
+margin:60px auto;
+background:#0c1422;
+border:1px solid rgba(0,255,120,0.35);
+border-radius:18px;
+padding:25px 35px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.server-left{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.server-left img{
+height:60px;
+width:60px;
+border-radius:50%;
+}
+
+.dot{
+height:8px;
+width:8px;
+background:#00ff99;
+border-radius:50%;
+display:inline-block;
+margin-right:6px;
+}
+
+.server-left p{
+color:#bbbbbb;
+margin-top:5px;
+}
+
+.server-btn{
+background:#00ff99;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.secondary-btn{
+background:#111a2a;
+border:1px solid rgba(0,255,120,0.3);
+color:#00ff99;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
 }
 
 /* FEATURES */
@@ -113,17 +177,14 @@ padding:100px 80px;
 .card{
 width:320px;
 padding:40px;
-background:#0c1020;
-border:1px solid rgba(255,80,0,0.25);
+background:#0c1422;
+border:1px solid rgba(0,255,120,0.25);
 border-radius:16px;
-}
-
-.card h3{
-margin-bottom:15px;
 }
 
 .card p{
 color:#bbbbbb;
+margin-top:15px;
 line-height:1.6;
 }
 
@@ -136,20 +197,19 @@ padding:120px 20px;
 
 .verify h2{
 font-size:42px;
-margin-bottom:20px;
 }
 
-.server-id-label{
-color:#bbbbbb;
+.server-label{
 margin-top:40px;
 margin-bottom:10px;
+color:#bbbbbb;
 }
 
 .id-box{
 width:500px;
 margin:0 auto;
-background:#0c1020;
-border:1px solid rgba(255,80,0,0.4);
+background:#0c1422;
+border:1px solid rgba(0,255,120,0.4);
 border-radius:12px;
 padding:18px 20px;
 display:flex;
@@ -159,8 +219,8 @@ align-items:center;
 
 .copy-icon{
 cursor:pointer;
+color:#00ff99;
 font-size:18px;
-color:#ff7a3d;
 }
 
 /* FOUNDER */
@@ -170,16 +230,11 @@ text-align:center;
 padding:120px 20px;
 }
 
-.founder h2{
-font-size:42px;
-margin-bottom:10px;
-}
-
 .founder-card{
 width:900px;
 margin:50px auto;
-background:#0c1020;
-border:1px solid rgba(255,80,0,0.25);
+background:#0c1422;
+border:1px solid rgba(0,255,120,0.25);
 border-radius:18px;
 padding:40px;
 text-align:left;
@@ -197,23 +252,18 @@ width:80px;
 border-radius:50%;
 }
 
-.founder-name{
-font-weight:700;
-margin-top:10px;
-}
-
 .founder-id{
 margin-top:10px;
-background:#11172b;
+background:#111a2a;
 padding:12px;
 border-radius:8px;
-color:#ff7a3d;
+color:#00ff99;
 }
 
 footer{
 text-align:center;
 padding:40px;
-color:#888;
+color:#777;
 }
 </style>
 </head>
@@ -238,8 +288,33 @@ color:#888;
 </nav>
 
 <section class="hero" id="about">
-<h1>Verify Our <span class="highlight">Marketplace</span></h1>
+<h1>The Premier Destination for <span class="highlight">Grand Piece Traders</span></h1>
 <p>Established a premium marketplace bringing together collectors, investors, and traders worldwide.</p>
+
+<div class="server-card">
+<div class="server-left">
+<img src="logo.gif">
+<div>
+<h3>Grand Piece MM</h3>
+<p><span class="dot"></span> 5,412 Online • 30,248 Members</p>
+</div>
+</div>
+
+<a href="https://discord.gg/gpotrades" target="_blank">
+<button class="server-btn">Join</button>
+</a>
+</div>
+
+<div class="hero-buttons">
+<a href="https://discord.gg/gpotrades" target="_blank">
+<button class="join-btn">Enter Marketplace</button>
+</a>
+
+<a href="#verification">
+<button class="secondary-btn">Verify IDs</button>
+</a>
+</div>
+
 </section>
 
 <section class="features">
@@ -262,7 +337,7 @@ color:#888;
 <section class="verify" id="verification">
 <h2>Verify Our <span class="highlight">Identity</span></h2>
 
-<div class="server-id-label">Main Server ID</div>
+<div class="server-label">Main Server ID</div>
 
 <div class="id-box">
 <span id="serverID">1460366527030235139</span>
@@ -278,7 +353,7 @@ color:#888;
 <div class="founder-top">
 <img src="img.png">
 <div>
-<div class="founder-name">eon</div>
+<div><strong>eon</strong></div>
 <div class="founder-id">1420423555136487497</div>
 </div>
 </div>
@@ -291,9 +366,9 @@ color:#888;
 
 <script>
 function copyID(){
-const text = document.getElementById("serverID").innerText;
+const text=document.getElementById("serverID").innerText;
 navigator.clipboard.writeText(text);
-alert("Copied Server ID");
+alert("Server ID copied");
 }
 </script>
 
