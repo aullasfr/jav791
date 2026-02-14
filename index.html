@@ -33,10 +33,23 @@ body{
     backdrop-filter:blur(14px);
     position:sticky;
     top:0;
-    z-index:1000;
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    height:48px;
+    width:48px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 0 20px rgba(0,255,120,0.6);
+}
+
+.logo span{
     font-weight:700;
     font-size:18px;
     color:#00ff99;
@@ -136,22 +149,11 @@ body{
     cursor:pointer;
 }
 
-/* HERO BUTTONS */
-
 .hero-buttons{
     margin-top:40px;
     display:flex;
     justify-content:center;
     gap:20px;
-}
-
-.btn-secondary{
-    background:#0e1a15;
-    border:1px solid #00ff9930;
-    padding:10px 22px;
-    border-radius:8px;
-    color:#baffdf;
-    cursor:pointer;
 }
 
 /* FEATURES */
@@ -187,49 +189,6 @@ body{
     line-height:1.6;
 }
 
-/* VERIFY SECTION */
-
-.verify{
-    text-align:center;
-    padding:120px 20px;
-}
-
-.verify h2{
-    font-size:42px;
-}
-
-.verify p{
-    margin-top:15px;
-    color:#9eeacb;
-}
-
-.verify-box{
-    margin:40px auto;
-    width:520px;
-    background:rgba(8,25,18,0.85);
-    border:1px solid rgba(0,255,120,0.25);
-    padding:20px;
-    border-radius:14px;
-    color:#baffdf;
-}
-
-/* FOUNDER */
-
-.founder{
-    text-align:center;
-    padding:120px 20px;
-}
-
-.founder-card{
-    width:560px;
-    margin:50px auto;
-    padding:30px;
-    background:rgba(8,25,18,0.85);
-    border:1px solid rgba(0,255,120,0.25);
-    border-radius:18px;
-    color:#caffea;
-}
-
 /* FOOTER */
 
 footer{
@@ -243,7 +202,12 @@ footer{
 <body>
 
 <nav class="navbar">
-    <div class="logo">Grand Piece MM 🌸</div>
+
+    <div class="logo">
+        <!-- PUT YOUR GIF FILE NAME HERE -->
+        <img src="logo.gif" alt="Server Logo">
+        <span>Grand Piece MM 🌸</span>
+    </div>
 
     <ul class="nav-links">
         <li><a href="#">About</a></li>
@@ -261,7 +225,7 @@ footer{
     </h1>
 
     <p>
-        Trade safely, connect with trusted members, and enjoy the best GPO marketplace community.
+        Trade safely and connect with trusted middlemen.
     </p>
 
     <div class="server-card">
@@ -281,41 +245,22 @@ footer{
 <section class="features">
     <div class="card">
         <h3>Trusted Middlemen</h3>
-        <p>Verified and experienced middlemen ensure secure trades.</p>
+        <p>Secure and verified trades.</p>
     </div>
 
     <div class="card">
         <h3>Active Community</h3>
-        <p>Thousands of members trading daily in a safe environment.</p>
+        <p>Thousands trading daily.</p>
     </div>
 
     <div class="card">
-        <h3>Fast & Secure</h3>
-        <p>Quick responses, strict rules, and zero tolerance for scammers.</p>
-    </div>
-</section>
-
-<section class="verify">
-    <h2>Verify Our <span class="gradient-text">Identity</span></h2>
-    <p>Always confirm the official server ID before trading.</p>
-
-    <div class="verify-box">
-        Official Server ID: 123456789012345678
-    </div>
-</section>
-
-<section class="founder">
-    <h2>Our <span class="gradient-text">Founder</span></h2>
-
-    <div class="founder-card">
-        FounderName <br>
-        @grandpiecemm <br>
-        987654321098765432
+        <h3>Fast & Safe</h3>
+        <p>Zero tolerance for scammers.</p>
     </div>
 </section>
 
 <footer>
-    © 2026 Grand Piece MM 🌸. All rights reserved.
+    © 2026 Grand Piece MM 🌸
 </footer>
 
 </body>
