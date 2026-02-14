@@ -13,14 +13,13 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Inter',sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
 background:
-radial-gradient(circle at 20% 20%, rgba(0,255,120,0.15), transparent 40%),
-radial-gradient(circle at 80% 80%, rgba(0,200,100,0.12), transparent 40%),
-#060b12;
+radial-gradient(circle at 15% 25%, rgba(0,255,120,0.12), transparent 45%),
+radial-gradient(circle at 85% 80%, rgba(0,180,100,0.12), transparent 45%),
+#050914;
 color:white;
 }
 
@@ -30,7 +29,7 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 80px;
+padding:20px 100px;
 position:sticky;
 top:0;
 backdrop-filter:blur(14px);
@@ -40,13 +39,18 @@ z-index:1000;
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 }
 
 .logo img{
-height:40px;
-width:40px;
+height:42px;
+width:42px;
 border-radius:50%;
+}
+
+.logo span{
+font-weight:600;
+font-size:16px;
 }
 
 .nav-links{
@@ -56,8 +60,9 @@ list-style:none;
 }
 
 .nav-links a{
-color:#cfcfcf;
+color:#d0d0d0;
 text-decoration:none;
+font-size:15px;
 transition:0.3s;
 }
 
@@ -68,23 +73,27 @@ color:#00ff99;
 .join-btn{
 background:linear-gradient(90deg,#00ff99,#00c870);
 border:none;
-padding:10px 20px;
+padding:10px 22px;
 border-radius:8px;
 font-weight:600;
 cursor:pointer;
 color:black;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
 text-align:center;
-padding:150px 20px 80px;
+padding:160px 20px 120px;
+max-width:1100px;
+margin:0 auto;
 }
 
 .hero h1{
-font-size:50px;
+font-size:64px;
 font-weight:800;
+line-height:1.15;
+letter-spacing:-1px;
 }
 
 .highlight{
@@ -94,19 +103,24 @@ background:linear-gradient(90deg,#00ff99,#00c870);
 }
 
 .hero p{
-margin-top:20px;
-color:#cfcfcf;
+margin-top:28px;
+font-size:18px;
+color:#b5b5b5;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.6;
 }
 
 /* SERVER CARD */
 
 .server-card{
-width:650px;
-margin:60px auto;
-background:#0c1422;
-border:1px solid rgba(0,255,120,0.35);
+margin:60px auto 0;
+width:620px;
+background:#0b1322;
+border:1px solid rgba(0,255,120,0.25);
 border-radius:18px;
-padding:25px 35px;
+padding:28px 35px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -124,6 +138,17 @@ width:60px;
 border-radius:50%;
 }
 
+.server-left h3{
+font-size:18px;
+font-weight:600;
+}
+
+.server-left p{
+font-size:14px;
+color:#9f9f9f;
+margin-top:6px;
+}
+
 .dot{
 height:8px;
 width:8px;
@@ -133,137 +158,43 @@ display:inline-block;
 margin-right:6px;
 }
 
-.server-left p{
-color:#bbbbbb;
-margin-top:5px;
-}
-
 .server-btn{
 background:#00ff99;
 border:none;
-padding:10px 20px;
+padding:10px 22px;
 border-radius:8px;
-cursor:pointer;
 font-weight:600;
-}
-
-/* HERO BUTTONS */
-
-.hero-buttons{
-margin-top:40px;
-display:flex;
-justify-content:center;
-gap:20px;
-}
-
-.secondary-btn{
-background:#111a2a;
-border:1px solid rgba(0,255,120,0.3);
-color:#00ff99;
-padding:10px 20px;
-border-radius:8px;
 cursor:pointer;
+color:black;
 }
 
-/* FEATURES */
-
-.features{
-display:flex;
-justify-content:center;
-gap:40px;
-padding:100px 80px;
+.server-btn:hover{
+box-shadow:0 0 18px rgba(0,255,120,0.5);
 }
 
-.card{
-width:320px;
-padding:40px;
-background:#0c1422;
-border:1px solid rgba(0,255,120,0.25);
-border-radius:16px;
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+nav{
+padding:20px 40px;
 }
 
-.card p{
-color:#bbbbbb;
-margin-top:15px;
-line-height:1.6;
-}
-
-/* VERIFY */
-
-.verify{
-text-align:center;
-padding:120px 20px;
-}
-
-.verify h2{
+.hero h1{
 font-size:42px;
 }
 
-.server-label{
-margin-top:40px;
-margin-bottom:10px;
-color:#bbbbbb;
-}
-
-.id-box{
-width:500px;
-margin:0 auto;
-background:#0c1422;
-border:1px solid rgba(0,255,120,0.4);
-border-radius:12px;
-padding:18px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.copy-icon{
-cursor:pointer;
-color:#00ff99;
-font-size:18px;
-}
-
-/* FOUNDER */
-
-.founder{
-text-align:center;
-padding:120px 20px;
-}
-
-.founder-card{
-width:900px;
-margin:50px auto;
-background:#0c1422;
-border:1px solid rgba(0,255,120,0.25);
-border-radius:18px;
-padding:40px;
-text-align:left;
-}
-
-.founder-top{
-display:flex;
-align-items:center;
+.server-card{
+width:100%;
+flex-direction:column;
 gap:20px;
-}
-
-.founder-top img{
-height:80px;
-width:80px;
-border-radius:50%;
-}
-
-.founder-id{
-margin-top:10px;
-background:#111a2a;
-padding:12px;
-border-radius:8px;
-color:#00ff99;
-}
-
-footer{
 text-align:center;
-padding:40px;
-color:#777;
+}
+
+.server-left{
+flex-direction:column;
+}
+
 }
 </style>
 </head>
@@ -277,9 +208,9 @@ color:#777;
 </div>
 
 <ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#verification">Verification</a></li>
-<li><a href="#team">Team</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Verification</a></li>
+<li><a href="#">Team</a></li>
 </ul>
 
 <a href="https://discord.gg/gpotrades" target="_blank">
@@ -287,11 +218,20 @@ color:#777;
 </a>
 </nav>
 
-<section class="hero" id="about">
-<h1>The Premier Destination for <span class="highlight">Grand Piece Traders</span></h1>
-<p>Established a premium marketplace bringing together collectors, investors, and traders worldwide.</p>
+<section class="hero">
+
+<h1>
+The Premier Destination for<br>
+<span class="highlight">Elite Traders</span>
+</h1>
+
+<p>
+Established a premium marketplace bringing together collectors,
+investors, and traders worldwide.
+</p>
 
 <div class="server-card">
+
 <div class="server-left">
 <img src="logo.gif">
 <div>
@@ -303,74 +243,10 @@ color:#777;
 <a href="https://discord.gg/gpotrades" target="_blank">
 <button class="server-btn">Join</button>
 </a>
-</div>
 
-<div class="hero-buttons">
-<a href="https://discord.gg/gpotrades" target="_blank">
-<button class="join-btn">Enter Marketplace</button>
-</a>
-
-<a href="#verification">
-<button class="secondary-btn">Verify IDs</button>
-</a>
 </div>
 
 </section>
-
-<section class="features">
-<div class="card">
-<h3>A Thriving Marketplace</h3>
-<p>Premium trading hub powered by thousands of active members.</p>
-</div>
-
-<div class="card">
-<h3>Safety & Security</h3>
-<p>Strict verification system for complete peace of mind.</p>
-</div>
-
-<div class="card">
-<h3>Active Community</h3>
-<p>Regular events and discussions to keep the marketplace dynamic.</p>
-</div>
-</section>
-
-<section class="verify" id="verification">
-<h2>Verify Our <span class="highlight">Identity</span></h2>
-
-<div class="server-label">Main Server ID</div>
-
-<div class="id-box">
-<span id="serverID">1460366527030235139</span>
-<span class="copy-icon" onclick="copyID()">📋</span>
-</div>
-</section>
-
-<section class="founder" id="team">
-<h2>Our <span class="highlight">Founder</span></h2>
-<p>The main man behind Grand Piece MM.</p>
-
-<div class="founder-card">
-<div class="founder-top">
-<img src="img.png">
-<div>
-<div><strong>eon</strong></div>
-<div class="founder-id">1420423555136487497</div>
-</div>
-</div>
-</div>
-</section>
-
-<footer>
-© 2026 Grand Piece MM
-</footer>
-
-<script>
-function copyID(){
-const text=document.getElementById("serverID").innerText;
-navigator.clipboard.writeText(text);
-alert("Server ID copied");
-}
-</script>
 
 </body>
 </html>
