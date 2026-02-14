@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Piece MM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:
+    radial-gradient(circle at 15% 20%, rgba(0,255,120,0.18), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(0,200,100,0.18), transparent 40%),
+    #040b07;
+    color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    backdrop-filter:blur(14px);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-weight:700;
+    font-size:18px;
+    color:#00ff99;
+}
+
+.nav-links{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#baffdf;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#00ff99;
+}
+
+.btn-primary{
+    background:linear-gradient(90deg,#00ff99,#00c870);
+    border:none;
+    padding:10px 22px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-primary:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(0,255,120,0.7);
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:150px 20px 80px;
+}
+
+.hero h1{
+    font-size:56px;
+    font-weight:800;
+    line-height:1.2;
+}
+
+.gradient-text{
+    background:linear-gradient(90deg,#00ff99,#00c870);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    margin-top:20px;
+    color:#9eeacb;
+    font-size:18px;
+}
+
+/* SERVER CARD */
+
+.server-card{
+    margin:60px auto;
+    width:520px;
+    background:rgba(8,25,18,0.85);
+    border:1px solid rgba(0,255,120,0.25);
+    border-radius:18px;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 0 40px rgba(0,255,120,0.15);
+}
+
+.server-info h3{
+    margin-bottom:10px;
+}
+
+.dot{
+    height:8px;
+    width:8px;
+    background:#00ff99;
+    border-radius:50%;
+    display:inline-block;
+    margin-right:6px;
+}
+
+.btn-small{
+    background:linear-gradient(90deg,#00ff99,#00c870);
+    border:none;
+    padding:8px 18px;
+    border-radius:6px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.btn-secondary{
+    background:#0e1a15;
+    border:1px solid #00ff9930;
+    padding:10px 22px;
+    border-radius:8px;
+    color:#baffdf;
+    cursor:pointer;
+}
+
+/* FEATURES */
+
+.features{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:100px 80px;
+}
+
+.card{
+    width:320px;
+    padding:40px;
+    background:rgba(8,25,18,0.85);
+    border:1px solid rgba(0,255,120,0.2);
+    border-radius:18px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(0,255,120,0.25);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00ff99;
+}
+
+.card p{
+    color:#a6f3d6;
+    line-height:1.6;
+}
+
+/* VERIFY SECTION */
+
+.verify{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.verify h2{
+    font-size:42px;
+}
+
+.verify p{
+    margin-top:15px;
+    color:#9eeacb;
+}
+
+.verify-box{
+    margin:40px auto;
+    width:520px;
+    background:rgba(8,25,18,0.85);
+    border:1px solid rgba(0,255,120,0.25);
+    padding:20px;
+    border-radius:14px;
+    color:#baffdf;
+}
+
+/* FOUNDER */
+
+.founder{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.founder-card{
+    width:560px;
+    margin:50px auto;
+    padding:30px;
+    background:rgba(8,25,18,0.85);
+    border:1px solid rgba(0,255,120,0.25);
+    border-radius:18px;
+    color:#caffea;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:50px;
+    color:#78e5bb;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">Grand Piece MM 🌸</div>
+
+    <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Verification</a></li>
+        <li><a href="#">Team</a></li>
+    </ul>
+
+    <button class="btn-primary">Join Server</button>
+</nav>
+
+<section class="hero">
+    <h1>
+        The Premier Destination for <br>
+        <span class="gradient-text">Grand Piece Traders</span>
+    </h1>
+
+    <p>
+        Trade safely, connect with trusted members, and enjoy the best GPO marketplace community.
+    </p>
+
+    <div class="server-card">
+        <div class="server-info">
+            <h3>Grand Piece MM 🌸</h3>
+            <p><span class="dot"></span> 5,412 Online • 30,248 Members</p>
+        </div>
+        <button class="btn-small">Join</button>
+    </div>
+
+    <div class="hero-buttons">
+        <button class="btn-primary">Enter Marketplace</button>
+        <button class="btn-secondary">Verify IDs</button>
+    </div>
+</section>
+
+<section class="features">
+    <div class="card">
+        <h3>Trusted Middlemen</h3>
+        <p>Verified and experienced middlemen ensure secure trades.</p>
+    </div>
+
+    <div class="card">
+        <h3>Active Community</h3>
+        <p>Thousands of members trading daily in a safe environment.</p>
+    </div>
+
+    <div class="card">
+        <h3>Fast & Secure</h3>
+        <p>Quick responses, strict rules, and zero tolerance for scammers.</p>
+    </div>
+</section>
+
+<section class="verify">
+    <h2>Verify Our <span class="gradient-text">Identity</span></h2>
+    <p>Always confirm the official server ID before trading.</p>
+
+    <div class="verify-box">
+        Official Server ID: 123456789012345678
+    </div>
+</section>
+
+<section class="founder">
+    <h2>Our <span class="gradient-text">Founder</span></h2>
+
+    <div class="founder-card">
+        FounderName <br>
+        @grandpiecemm <br>
+        987654321098765432
+    </div>
+</section>
+
+<footer>
+    © 2026 Grand Piece MM 🌸. All rights reserved.
+</footer>
+
+</body>
+</html>
