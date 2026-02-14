@@ -10,7 +10,6 @@
             --primary-green: #00ff99;
             --dark-green: #00c870;
             --bg-dark: #060b12;
-            --card-bg: #0c1422;
         }
 
         * {
@@ -24,7 +23,7 @@
         body {
             background-color: var(--bg-dark);
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(0, 255, 153, 0.08), transparent 45%),
+                radial-gradient(circle at 50% 0%, rgba(0, 255, 153, 0.1), transparent 45%),
                 radial-gradient(circle at 100% 100%, rgba(0, 200, 112, 0.05), transparent 45%);
             color: white;
             line-height: 1.6;
@@ -52,7 +51,7 @@
         .nav-links a:hover { color: var(--primary-green); }
 
         .nav-join {
-            background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
+            background: var(--primary-green);
             border: none;
             padding: 10px 22px;
             border-radius: 8px;
@@ -90,41 +89,51 @@
             margin: 0 auto 40px;
         }
 
-        /* SERVER STATUS BAR - RATIO FIX */
+        /* SERVER STATUS BAR - PERFECTLY CENTERED TEXT */
         .server-status-bar {
             background: rgba(12, 20, 34, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 153, 0.15);
             border-radius: 12px;
-            padding: 10px 16px; /* Compact padding */
+            padding: 14px 20px; 
             display: inline-flex;
             align-items: center;
-            gap: 35px; /* Narrower gap to match Trade Core ratio */
-            margin-bottom: 50px;
-            max-width: 480px; /* Constrained width */
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 55px;
+            min-width: 460px;
         }
 
-        .server-info { display: flex; align-items: center; gap: 12px; }
-        .server-info img { width: 42px; height: 42px; border-radius: 8px; }
-        .server-details { text-align: left; }
-        .server-details h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0px; }
-        .server-details p { font-size: 0.75rem; color: #64748b; white-space: nowrap; }
+        .server-info { display: flex; align-items: center; gap: 14px; }
+        .server-info img { width: 44px; height: 44px; border-radius: 10px; }
         
-        .dot { height: 6px; width: 6px; background: var(--primary-green); border-radius: 50%; display: inline-block; margin-right: 5px; box-shadow: 0 0 8px var(--primary-green); }
+        /* Fixed text centering here */
+        .server-details { 
+            text-align: left; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; /* Vertical center */
+            height: 44px; /* Matches pfp height for perfect alignment */
+        }
+        
+        .server-details h4 { font-size: 1rem; font-weight: 700; line-height: 1; margin: 0; }
+        .server-details p { font-size: 0.78rem; color: #64748b; white-space: nowrap; margin-top: 4px; line-height: 1; }
+        
+        .dot { height: 7px; width: 7px; background: var(--primary-green); border-radius: 50%; display: inline-block; margin-right: 6px; box-shadow: 0 0 8px var(--primary-green); }
 
         .mini-btn {
-            background: #ff2b5b; /* Screenshot uses a bright red-pink for the Join button */
-            color: #fff;
+            background: var(--primary-green);
+            color: #000;
             border: none;
-            padding: 8px 20px;
-            border-radius: 6px;
+            padding: 9px 24px;
+            border-radius: 8px;
             font-weight: 800;
             cursor: pointer;
-            font-size: 0.85rem;
-            /* To keep green theme, use: background: var(--primary-green); color: #000; */
+            font-size: 0.88rem;
+            align-self: center;
         }
 
         .hero-btns { display: flex; justify-content: center; gap: 15px; }
-        .btn-main { background: linear-gradient(90deg, var(--primary-green), var(--dark-green)); color: black; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 800; }
+        .btn-main { background: var(--primary-green); color: black; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 800; }
         .btn-sec { background: #1e293b66; color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.08); }
 
         /* FEATURES SECTION */
@@ -201,7 +210,8 @@
 
         @media (max-width: 900px) {
             .features-grid { flex-direction: column; }
-            .server-status-bar { flex-direction: column; width: 100%; gap: 15px; }
+            .server-status-bar { flex-direction: column; width: 100%; min-width: auto; gap: 15px; padding: 20px; }
+            .server-details { text-align: center; height: auto; }
         }
     </style>
 </head>
