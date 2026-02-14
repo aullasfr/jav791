@@ -24,8 +24,8 @@
         body {
             background-color: var(--bg-dark);
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(0, 255, 153, 0.08), transparent 40%),
-                radial-gradient(circle at 100% 100%, rgba(0, 200, 112, 0.05), transparent 40%);
+                radial-gradient(circle at 50% 0%, rgba(0, 255, 153, 0.08), transparent 45%),
+                radial-gradient(circle at 100% 100%, rgba(0, 200, 112, 0.05), transparent 45%);
             color: white;
             line-height: 1.6;
             overflow-x: hidden;
@@ -36,7 +36,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 10%;
+            padding: 25px 10%;
             position: fixed;
             width: 100%;
             top: 0;
@@ -47,15 +47,15 @@
         .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; }
         .logo img { height: 32px; width: 32px; border-radius: 50%; }
 
-        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links { display: flex; gap: 35px; list-style: none; }
         .nav-links a { color: #adadad; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary-green); }
 
         .nav-join {
             background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
             border: none;
-            padding: 12px 24px;
-            border-radius: 10px;
+            padding: 10px 22px;
+            border-radius: 8px;
             font-weight: 800;
             color: #000;
             cursor: pointer;
@@ -90,86 +90,87 @@
             margin: 0 auto 50px;
         }
 
-        /* SERVER STATUS BAR */
+        /* SERVER STATUS BAR - RATIO FIXED */
         .server-status-bar {
             background: rgba(12, 20, 34, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 18px;
-            padding: 18px 25px;
+            border-radius: 14px;
+            padding: 12px 20px;
             display: inline-flex;
             align-items: center;
-            gap: 60px;
+            gap: 45px;
             margin-bottom: 60px;
         }
 
-        .server-info { display: flex; align-items: center; gap: 15px; }
-        .server-info img { width: 50px; height: 50px; border-radius: 12px; }
+        .server-info { display: flex; align-items: center; gap: 12px; }
+        .server-info img { width: 44px; height: 44px; border-radius: 10px; }
         .server-details { text-align: left; }
-        .server-details h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 2px; }
-        .server-details p { font-size: 0.8rem; color: #64748b; }
+        .server-details h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1px; }
+        .server-details p { font-size: 0.78rem; color: #64748b; display: flex; align-items: center; }
         
-        .dot { height: 8px; width: 8px; background: var(--primary-green); border-radius: 50%; display: inline-block; margin-right: 6px; box-shadow: 0 0 10px var(--primary-green); }
+        .dot { height: 7px; width: 7px; background: var(--primary-green); border-radius: 50%; display: inline-block; margin-right: 6px; box-shadow: 0 0 8px var(--primary-green); }
 
         .mini-btn {
-            background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
+            background: var(--primary-green);
             color: #000;
             border: none;
-            padding: 10px 28px;
-            border-radius: 10px;
+            padding: 8px 24px;
+            border-radius: 8px;
             font-weight: 800;
             cursor: pointer;
+            font-size: 0.9rem;
         }
 
         .hero-btns { display: flex; justify-content: center; gap: 15px; }
-        .btn-main { background: linear-gradient(90deg, var(--primary-green), var(--dark-green)); color: black; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 800; }
-        .btn-sec { background: #1e293b66; color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.08); }
+        .btn-main { background: linear-gradient(90deg, var(--primary-green), var(--dark-green)); color: black; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+        .btn-sec { background: #1e293b66; color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 8px; }
 
-        /* FEATURES SECTION - RESTORED */
+        /* FEATURES SECTION */
         .features-grid {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 100px 10%;
-            max-width: 1400px;
+            gap: 25px;
+            padding: 80px 10%;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
         .feature-card {
             background: rgba(12, 20, 34, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 45px 35px;
-            border-radius: 24px;
+            padding: 40px 30px;
+            border-radius: 20px;
             text-align: left;
             flex: 1;
         }
 
         .icon-box {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             background: rgba(0, 255, 153, 0.1);
             color: var(--primary-green);
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
-            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
         }
 
-        .feature-card h3 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 800; }
-        .feature-card p { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; }
+        .feature-card h3 { font-size: 1.4rem; margin-bottom: 12px; font-weight: 800; }
+        .feature-card p { color: #94a3b8; font-size: 0.92rem; line-height: 1.65; }
 
         /* VERIFY & FOUNDER */
         .v-section { padding: 100px 20px; text-align: center; }
-        .badge { background: rgba(0, 255, 153, 0.1); color: var(--primary-green); padding: 8px 18px; border-radius: 100px; font-size: 0.8rem; font-weight: 800; border: 1px solid rgba(0, 255, 153, 0.2); display: inline-block; margin-bottom: 25px; }
+        .badge { background: rgba(0, 255, 153, 0.1); color: var(--primary-green); padding: 7px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 800; border: 1px solid rgba(0, 255, 153, 0.2); display: inline-block; margin-bottom: 25px; }
 
         .id-box {
-            max-width: 600px;
-            margin: 30px auto;
+            max-width: 550px;
+            margin: 25px auto;
             background: #090e17;
             border: 1px solid rgba(255,255,255,0.05);
-            padding: 20px 25px;
-            border-radius: 12px;
+            padding: 16px 22px;
+            border-radius: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -177,32 +178,29 @@
         }
 
         .founder-card {
-            max-width: 800px;
+            max-width: 700px;
             margin: 40px auto;
-            background: rgba(12, 20, 34, 0.4);
+            background: rgba(12, 20, 34, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 18px;
+            padding: 35px;
             text-align: left;
         }
 
-        .founder-top { display: flex; align-items: center; gap: 25px; margin-bottom: 30px; }
-        .founder-top img { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--primary-green); }
-        .founder-info h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
-        .badge-list { display: flex; gap: 10px; }
-        .d-badge { height: 20px; opacity: 0.9; }
+        .founder-top { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
+        .founder-top img { width: 75px; height: 75px; border-radius: 50%; border: 3px solid var(--primary-green); }
+        .founder-info h3 { font-size: 1.6rem; font-weight: 800; }
 
-        .data-input { background: #090e17; padding: 16px; border-radius: 10px; margin-top: 15px; font-size: 0.95rem; color: #cbd5e1; border: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; }
+        .data-input { background: #090e17; padding: 14px; border-radius: 8px; margin-top: 12px; font-size: 0.9rem; color: #cbd5e1; border: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; }
         
-        .copy-ico { cursor: pointer; transition: 0.2s; font-size: 1.2rem; }
-        .copy-ico:hover { color: white; }
+        .copy-ico { cursor: pointer; transition: 0.2s; font-size: 1.1rem; opacity: 0.7; }
+        .copy-ico:hover { opacity: 1; color: var(--primary-green); }
 
-        footer { padding: 80px 20px; text-align: center; color: #475569; font-size: 0.9rem; }
+        footer { padding: 80px 20px; text-align: center; color: #475569; font-size: 0.85rem; }
 
         @media (max-width: 900px) {
             .features-grid { flex-direction: column; }
-            .server-status-bar { flex-direction: column; width: 100%; gap: 30px; }
-            .hero-btns { flex-direction: column; }
+            .server-status-bar { flex-direction: column; width: 100%; gap: 25px; }
         }
     </style>
 </head>
@@ -262,33 +260,28 @@
 
     <section class="v-section" id="verification">
         <div class="badge">● Official Server</div>
-        <h2 style="font-size: 3rem; font-weight: 800;">Verify Our <span class="highlight">Identity</span></h2>
+        <h2 style="font-size: 2.8rem; font-weight: 800;">Verify Our <span class="highlight">Identity</span></h2>
         <p style="color: #64748b; margin-top: 15px;">Don't fall for imposters. Verify the Server ID and Founder IDs below.</p>
 
-        <div style="margin-top: 60px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
-            <span style="font-size: 0.8rem; color: #475569; font-weight: 800; text-transform: uppercase;">Main Server ID</span>
+        <div style="margin-top: 55px; text-align: left; max-width: 550px; margin-left: auto; margin-right: auto;">
+            <span style="font-size: 0.75rem; color: #475569; font-weight: 800; text-transform: uppercase;">Main Server ID</span>
             <div class="id-box">
                 <span id="serverID">1460366527030235139</span>
                 <span class="copy-ico" onclick="copy('serverID')">📋</span>
             </div>
-            <p style="font-size: 0.75rem; color: #475569; text-align: center;">Always check the Server ID before trading.</p>
+            <p style="font-size: 0.72rem; color: #475569; text-align: center;">Always check the Server ID before trading.</p>
         </div>
     </section>
 
     <section class="v-section" id="team" style="padding-top: 0;">
-        <h2 style="font-size: 3rem; font-weight: 800;">Our <span class="highlight">Founder</span></h2>
+        <h2 style="font-size: 2.8rem; font-weight: 800;">Our <span class="highlight">Founder</span></h2>
         <p style="color: #64748b; margin-top: 15px;">The main man behind Grand Piece MM.</p>
 
         <div class="founder-card">
             <div class="founder-top">
-                <img src="https://ui-avatars.com/api/?name=eon&background=00ff99&color=000&bold=true">
+                <img src="img.png">
                 <div class="founder-info">
                     <h3>eon</h3>
-                    <div class="badge-list">
-                        <img src="https://raw.githubusercontent.com/m6v8/discord-badges/main/badges/hypesquad_balance.svg" class="d-badge">
-                        <img src="https://raw.githubusercontent.com/m6v8/discord-badges/main/badges/nitro.svg" class="d-badge">
-                        <img src="https://raw.githubusercontent.com/m6v8/discord-badges/main/badges/boost1.svg" class="d-badge">
-                    </div>
                 </div>
             </div>
             <div class="data-input">@91jr</div>
