@@ -87,43 +87,45 @@
             color: #94a3b8;
             font-size: 1.1rem;
             max-width: 600px;
-            margin: 0 auto 50px;
+            margin: 0 auto 40px;
         }
 
-        /* SERVER STATUS BAR - RATIO FIXED */
+        /* SERVER STATUS BAR - RATIO FIX */
         .server-status-bar {
-            background: rgba(12, 20, 34, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 14px;
-            padding: 12px 20px;
+            background: rgba(12, 20, 34, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 10px 16px; /* Compact padding */
             display: inline-flex;
             align-items: center;
-            gap: 45px;
-            margin-bottom: 60px;
+            gap: 35px; /* Narrower gap to match Trade Core ratio */
+            margin-bottom: 50px;
+            max-width: 480px; /* Constrained width */
         }
 
         .server-info { display: flex; align-items: center; gap: 12px; }
-        .server-info img { width: 44px; height: 44px; border-radius: 10px; }
+        .server-info img { width: 42px; height: 42px; border-radius: 8px; }
         .server-details { text-align: left; }
-        .server-details h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1px; }
-        .server-details p { font-size: 0.78rem; color: #64748b; display: flex; align-items: center; }
+        .server-details h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0px; }
+        .server-details p { font-size: 0.75rem; color: #64748b; white-space: nowrap; }
         
-        .dot { height: 7px; width: 7px; background: var(--primary-green); border-radius: 50%; display: inline-block; margin-right: 6px; box-shadow: 0 0 8px var(--primary-green); }
+        .dot { height: 6px; width: 6px; background: var(--primary-green); border-radius: 50%; display: inline-block; margin-right: 5px; box-shadow: 0 0 8px var(--primary-green); }
 
         .mini-btn {
-            background: var(--primary-green);
-            color: #000;
+            background: #ff2b5b; /* Screenshot uses a bright red-pink for the Join button */
+            color: #fff;
             border: none;
-            padding: 8px 24px;
-            border-radius: 8px;
+            padding: 8px 20px;
+            border-radius: 6px;
             font-weight: 800;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            /* To keep green theme, use: background: var(--primary-green); color: #000; */
         }
 
         .hero-btns { display: flex; justify-content: center; gap: 15px; }
-        .btn-main { background: linear-gradient(90deg, var(--primary-green), var(--dark-green)); color: black; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 800; display: flex; align-items: center; gap: 8px; }
-        .btn-sec { background: #1e293b66; color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 8px; }
+        .btn-main { background: linear-gradient(90deg, var(--primary-green), var(--dark-green)); color: black; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 800; }
+        .btn-sec { background: #1e293b66; color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.08); }
 
         /* FEATURES SECTION */
         .features-grid {
@@ -154,7 +156,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            font-size: 1.1rem;
         }
 
         .feature-card h3 { font-size: 1.4rem; margin-bottom: 12px; font-weight: 800; }
@@ -200,7 +201,7 @@
 
         @media (max-width: 900px) {
             .features-grid { flex-direction: column; }
-            .server-status-bar { flex-direction: column; width: 100%; gap: 25px; }
+            .server-status-bar { flex-direction: column; width: 100%; gap: 15px; }
         }
     </style>
 </head>
