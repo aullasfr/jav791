@@ -11,7 +11,7 @@
             --dark-green: #00c870;
             --bg-dark: #060b12;
             --card-bg: #0c1422;
-            --border-glow: rgba(0, 255, 120, 0.15);
+            --accent-glow: rgba(0, 255, 153, 0.2);
         }
 
         * {
@@ -25,8 +25,8 @@
         body {
             background-color: var(--bg-dark);
             background-image: 
-                radial-gradient(circle at 50% -10%, rgba(0, 255, 153, 0.12), transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(0, 200, 112, 0.05), transparent 40%);
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 153, 0.08), transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(0, 200, 112, 0.05), transparent 35%);
             color: white;
             line-height: 1.6;
             overflow-x: hidden;
@@ -37,13 +37,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 10%;
+            padding: 25px 10%;
             position: fixed;
             width: 100%;
             top: 0;
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(15px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .logo {
@@ -51,45 +50,47 @@
             align-items: center;
             gap: 12px;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
-        .logo img { height: 32px; width: 32px; border-radius: 50%; }
+        .logo img { height: 35px; width: 35px; border-radius: 50%; }
 
-        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links { display: flex; gap: 35px; list-style: none; }
         .nav-links a { 
             color: #adadad; 
             text-decoration: none; 
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: 0.3s; 
         }
         .nav-links a:hover { color: var(--primary-green); }
 
-        .join-btn {
-            background: linear-gradient(90deg, #ff4b2b, #ff416c); /* Default Red like screenshot */
+        .nav-join {
             background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
             border: none;
-            padding: 10px 22px;
-            border-radius: 8px;
-            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 800;
             color: #000;
             cursor: pointer;
-            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             transition: 0.3s;
         }
 
         /* HERO SECTION */
         .hero {
             text-align: center;
-            padding: 180px 20px 100px;
-            max-width: 900px;
+            padding: 200px 20px 100px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
             margin-bottom: 20px;
         }
 
@@ -101,148 +102,156 @@
 
         .hero p {
             color: #94a3b8;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 40px;
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin: 0 auto 50px;
         }
 
-        /* SERVER STATUS CARD (The "Join" Bar) */
-        .server-status-bar {
-            background: rgba(12, 20, 34, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 15px 25px;
+        /* SERVER STATUS BAR (Matches Trade Core style) */
+        .server-status-card {
+            background: rgba(12, 20, 34, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            padding: 12px 20px;
             display: inline-flex;
             align-items: center;
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 50px;
+            margin-bottom: 50px;
         }
 
-        .server-info { display: flex; align-items: center; gap: 12px; }
-        .server-info img { width: 45px; height: 45px; border-radius: 12px; }
+        .server-info { display: flex; align-items: center; gap: 15px; }
+        .server-info img { width: 45px; height: 45px; border-radius: 10px; }
         .server-details { text-align: left; }
-        .server-details h4 { font-size: 0.95rem; }
-        .server-details p { font-size: 0.75rem; color: #888; margin: 0; }
+        .server-details h4 { font-size: 1rem; font-weight: 700; }
+        .server-details p { font-size: 0.8rem; color: #64748b; margin: 0; }
         
-        .status-dot {
-            height: 8px; width: 8px;
+        .dot-green {
+            height: 7px; width: 7px;
             background: var(--primary-green);
             border-radius: 50%;
             display: inline-block;
-            margin-right: 5px;
-            box-shadow: 0 0 10px var(--primary-green);
+            margin-right: 6px;
+            box-shadow: 0 0 8px var(--primary-green);
         }
 
-        .mini-join-btn {
-            background: #ff4b2b; /* Matching the red "Join" in the screenshot */
-            background: linear-gradient(90deg, #ff4b2b, #ff2b5b);
-            /* To keep your green theme, uncomment below: */
-            /* background: var(--primary-green); color: black; */
+        .status-join-btn {
+            background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
+            color: #000;
             border: none;
-            padding: 8px 20px;
-            border-radius: 6px;
-            font-weight: 700;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 800;
             cursor: pointer;
+            transition: 0.3s;
         }
 
-        /* ACTION BUTTONS */
-        .hero-btns {
+        .status-join-btn:hover { transform: scale(1.05); }
+
+        .hero-actions {
             display: flex;
             justify-content: center;
             gap: 15px;
         }
 
-        .btn-main {
+        .action-main {
             background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
             color: black;
-            padding: 12px 28px;
-            border-radius: 8px;
+            padding: 15px 35px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-weight: 800;
         }
 
-        .btn-secondary {
-            background: #1e293b;
+        .action-sec {
+            background: #1e293b66;
             color: white;
-            padding: 12px 28px;
-            border-radius: 8px;
+            padding: 15px 35px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             border: 1px solid rgba(255,255,255,0.1);
         }
 
         /* VERIFICATION SECTION */
-        .section-verify {
-            padding: 100px 20px;
-            text-align: center;
-        }
+        .v-section { padding: 120px 20px; text-align: center; }
 
-        .badge-official {
+        .official-badge {
             background: rgba(0, 255, 153, 0.1);
             color: var(--primary-green);
-            padding: 6px 16px;
+            padding: 8px 20px;
             border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 700;
+            font-size: 0.8rem;
+            font-weight: 800;
             border: 1px solid rgba(0, 255, 153, 0.2);
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        .id-container {
-            max-width: 500px;
-            margin: 30px auto;
+        .id-label { font-size: 0.8rem; color: #475569; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
+
+        .id-box-modern {
+            max-width: 550px;
+            margin: 20px auto;
             background: #090e17;
             border: 1px solid rgba(255,255,255,0.05);
-            padding: 15px 20px;
-            border-radius: 8px;
+            padding: 18px 25px;
+            border-radius: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: #94a3b8;
+            font-weight: 500;
         }
 
-        .copy-trigger { cursor: pointer; transition: 0.3s; }
-        .copy-trigger:hover { color: white; }
+        .copy-btn { cursor: pointer; font-size: 1.2rem; transition: 0.2s; }
+        .copy-btn:hover { color: var(--primary-green); }
 
-        /* FOUNDER CARD */
-        .founder-wrap {
-            max-width: 700px;
-            margin: 40px auto;
+        /* FOUNDER PROFILE */
+        .founder-profile {
+            max-width: 750px;
+            margin: 50px auto;
             background: #090e17;
             border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 15px;
+            padding: 35px;
             text-align: left;
+            position: relative;
         }
 
-        .founder-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
-        .founder-header img { width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--primary-green); }
-        .founder-name { font-size: 1.4rem; font-weight: 700; }
+        .founder-top { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
+        .founder-top img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--primary-green); }
+        
+        .founder-user-wrap h3 { font-size: 1.6rem; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        
+        /* Discord Badges */
+        .badge-list { display: flex; gap: 8px; margin-top: 5px; }
+        .discord-badge { height: 18px; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2)); }
 
-        .founder-field {
+        .data-row {
             background: #0c1422;
-            padding: 12px;
-            border-radius: 6px;
-            margin-top: 10px;
-            font-size: 0.85rem;
-            color: #64748b;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
             border: 1px solid rgba(255,255,255,0.03);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         footer {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            color: #475569;
-            font-size: 0.8rem;
+            color: #334155;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.03);
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .server-status-bar { flex-direction: column; gap: 20px; width: 100%; }
+            .server-status-card { flex-direction: column; gap: 25px; width: 100%; }
+            .hero-actions { flex-direction: column; }
         }
     </style>
 </head>
@@ -258,76 +267,89 @@
             <li><a href="#verification">Verification</a></li>
             <li><a href="#team">Team</a></li>
         </ul>
-        <button class="join-btn" onclick="window.open('https://discord.gg/gpotrades')">Join Server</button>
+        <button class="nav-join" onclick="window.open('https://discord.gg/gpotrades')">
+            <span>Join Server</span>
+        </button>
     </nav>
 
     <section class="hero" id="about">
-        <h1>The Premier Destination for <br><span class="highlight">Elite Traders</span></h1>
+        <h1>The Premire Destination for <br><span class="highlight">Elite Traders</span></h1>
         <p>Established a premium marketplace bringing together collectors, investors, and traders worldwide.</p>
 
-        <div class="server-status-bar">
+        <div class="server-status-card">
             <div class="server-info">
                 <img src="logo.gif" alt="Server">
                 <div class="server-details">
                     <h4>Grand Piece MM</h4>
-                    <p><span class="status-dot"></span> 5,412 Online • 30,248 Members</p>
+                    <p><span class="dot-green"></span> 5,412 Online • 30,248 Members</p>
                 </div>
             </div>
-            <button class="mini-join-btn" onclick="window.open('https://discord.gg/gpotrades')">Join</button>
+            <button class="status-join-btn" onclick="window.open('https://discord.gg/gpotrades')">Join</button>
         </div>
 
-        <div class="hero-btns">
-            <a href="https://discord.gg/gpotrades" class="btn-main">🚀 Enter Marketplace</a>
-            <a href="#verification" class="btn-secondary">🛡️ Verify IDs</a>
+        <div class="hero-actions">
+            <a href="https://discord.gg/gpotrades" class="action-main">Enter Marketplace</a>
+            <a href="#verification" class="action-sec">Verify IDs</a>
         </div>
     </section>
 
-    <section class="section-verify" id="verification">
-        <div class="badge-official">● Official Server</div>
-        <h2 style="font-size: 2.5rem; font-weight: 800;">Verify Our <span class="highlight">Identity</span></h2>
-        <p style="color: #64748b; margin-top: 10px;">Don't fall for imposters. Verify the Server ID and Founder IDs below.</p>
+    <section class="v-section" id="verification">
+        <div class="official-badge">● Official Server</div>
+        <h2 style="font-size: 3rem; font-weight: 800;">Verify Our <span class="highlight">Identity</span></h2>
+        <p style="color: #64748b; margin-top: 15px;">Don't fall for imposters. Verify the Server ID and Founder IDs below.</p>
 
-        <div style="margin-top: 50px; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto;">
-            <label style="font-size: 0.75rem; color: #475569; text-transform: uppercase; font-weight: 700;">Main Server ID</label>
-            <div class="id-container">
+        <div style="margin-top: 60px; text-align: left; max-width: 550px; margin-left: auto; margin-right: auto;">
+            <span class="id-label">Main Server ID</span>
+            <div class="id-box-modern">
                 <span id="serverID">1460366527030235139</span>
-                <span class="copy-trigger" onclick="copyID('serverID')">📋</span>
+                <span class="copy-btn" onclick="copyText('serverID')">📋</span>
             </div>
-            <p style="font-size: 0.7rem; color: #475569; text-align: center;">Always check the Server ID before trading.</p>
+            <p style="font-size: 0.75rem; color: #475569; text-align: center; margin-top: 10px;">Always check the Server ID before trading.</p>
         </div>
     </section>
 
-    <section class="section-verify" id="team" style="padding-top: 0;">
-        <h2 style="font-size: 2.5rem; font-weight: 800;">Our <span class="highlight">Founder</span></h2>
-        <p style="color: #64748b; margin-top: 10px;">The main man behind Grand Piece MM.</p>
+    <section class="v-section" id="team" style="padding-top: 0;">
+        <h2 style="font-size: 3rem; font-weight: 800;">Our <span class="highlight">Founder</span></h2>
+        <p style="color: #64748b; margin-top: 15px;">The main man behind Grand Piece MM.</p>
 
-        <div class="founder-wrap">
-            <div class="founder-header">
+        <div class="founder-profile">
+            <div class="founder-top">
                 <img src="img.png" alt="Founder">
-                <div class="founder-name">eon</div>
+                <div class="founder-user-wrap">
+                    <h3>91jr</h3>
+                    <div class="badge-list">
+                        <img src="https://raw.githubusercontent.com/m6v8/discord-badges/main/badges/hypesquad_balance.svg" class="discord-badge">
+                        <img src="https://raw.githubusercontent.com/m6v8/discord-badges/main/badges/nitro.svg" class="discord-badge">
+                        <img src="https://raw.githubusercontent.com/m6v8/discord-badges/main/badges/boost1.svg" class="discord-badge">
+                    </div>
+                </div>
             </div>
-            <div class="founder-field">@eon.gpo</div>
-            <div class="founder-field" style="display: flex; justify-content: space-between;">
+            <div class="data-row">@eon.gpo</div>
+            <div class="data-row">
                 <span id="founderID">1420423555136487497</span>
-                <span class="copy-trigger" onclick="copyID('founderID')">📋</span>
+                <span class="copy-btn" onclick="copyText('founderID')">📋</span>
             </div>
         </div>
     </section>
 
     <footer>
-        © 2026 Grand Piece MM • Secure Trading Environment
+        © 2026 Grand Piece MM • All Rights Reserved.
     </footer>
 
     <script>
-        function copyID(id) {
+        function copyText(id) {
             const text = document.getElementById(id).innerText;
             navigator.clipboard.writeText(text);
             
             // Visual feedback
-            const btn = event.target;
-            const original = btn.innerText;
-            btn.innerText = "✅";
-            setTimeout(() => btn.innerText = original, 2000);
+            const el = event.target;
+            const original = el.innerText;
+            el.innerText = "✅";
+            el.style.color = "#00ff99";
+            setTimeout(() => {
+                el.innerText = original;
+                el.style.color = "";
+            }, 2000);
         }
     </script>
 </body>
