@@ -9,285 +9,291 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:
-    radial-gradient(circle at 15% 20%, rgba(0,255,120,0.15), transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(0,200,100,0.15), transparent 40%),
-    #040b07;
-    color:white;
+background:
+radial-gradient(circle at 15% 20%, rgba(120,0,0,0.25), transparent 40%),
+radial-gradient(circle at 85% 80%, rgba(255,80,0,0.15), transparent 40%),
+#05060f;
+color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 80px;
-    backdrop-filter:blur(14px);
-    position:sticky;
-    top:0;
-    z-index:1000;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+position:sticky;
+top:0;
+backdrop-filter:blur(14px);
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .logo img{
-    height:48px;
-    width:48px;
-    border-radius:50%;
-    object-fit:cover;
-    box-shadow:0 0 20px rgba(0,255,120,0.6);
+height:40px;
+width:40px;
+border-radius:50%;
 }
 
 .logo span{
-    font-weight:700;
-    font-size:18px;
-    color:#00ff99;
+font-weight:700;
 }
 
 .nav-links{
-    display:flex;
-    gap:40px;
-    list-style:none;
+display:flex;
+gap:40px;
+list-style:none;
 }
 
 .nav-links a{
-    color:#baffdf;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
+color:#d0d0d0;
+text-decoration:none;
+transition:0.3s;
 }
 
 .nav-links a:hover{
-    color:#00ff99;
+color:#ff5c3a;
 }
 
-/* BUTTONS */
-
-.btn{
-    background:linear-gradient(90deg,#00ff99,#00c870);
-    border:none;
-    padding:10px 22px;
-    border-radius:8px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-    color:black;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px rgba(0,255,120,0.7);
+.join-btn{
+background:linear-gradient(90deg,#ff4d4d,#ff7a3d);
+border:none;
+padding:10px 20px;
+border-radius:8px;
+color:white;
+font-weight:600;
+cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-    text-align:center;
-    padding:150px 20px 100px;
+text-align:center;
+padding:140px 20px 100px;
 }
 
 .hero h1{
-    font-size:56px;
-    font-weight:800;
+font-size:50px;
+font-weight:800;
 }
 
-.gradient-text{
-    background:linear-gradient(90deg,#00ff99,#00c870);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.highlight{
+background:linear-gradient(90deg,#ff4d4d,#ff7a3d);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    margin-top:20px;
-    color:#9eeacb;
-}
-
-/* SERVER CARD */
-
-.server-card{
-    margin:60px auto;
-    width:650px;
-    background:rgba(8,25,18,0.9);
-    border:1px solid rgba(0,255,120,0.25);
-    border-radius:18px;
-    padding:25px 35px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.server-left{
-    display:flex;
-    align-items:center;
-    gap:18px;
-}
-
-.server-left img{
-    height:60px;
-    width:60px;
-    border-radius:50%;
-}
-
-.dot{
-    height:8px;
-    width:8px;
-    background:#00ff99;
-    border-radius:50%;
-    display:inline-block;
-    margin-right:6px;
-}
-
-/* SECTION */
-
-section{
-    padding:120px 20px;
-    text-align:center;
-}
-
-section h2{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.info-box{
-    margin:40px auto;
-    width:500px;
-    background:rgba(8,25,18,0.9);
-    border:1px solid rgba(0,255,120,0.25);
-    padding:20px;
-    border-radius:12px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    color:#a6f3d6;
-}
-
-.copy-btn{
-    background:#00ff99;
-    border:none;
-    padding:6px 14px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:600;
+margin-top:20px;
+color:#cfcfcf;
 }
 
 /* FEATURES */
 
 .features{
-    display:flex;
-    justify-content:center;
-    gap:40px;
+display:flex;
+justify-content:center;
+gap:40px;
+padding:100px 80px;
 }
 
 .card{
-    width:300px;
-    padding:40px;
-    background:rgba(8,25,18,0.9);
-    border:1px solid rgba(0,255,120,0.2);
-    border-radius:18px;
-    transition:0.3s;
+width:320px;
+padding:40px;
+background:#0c1020;
+border:1px solid rgba(255,80,0,0.25);
+border-radius:16px;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 35px rgba(0,255,120,0.25);
+.card h3{
+margin-bottom:15px;
+}
+
+.card p{
+color:#bbbbbb;
+line-height:1.6;
+}
+
+/* VERIFY */
+
+.verify{
+text-align:center;
+padding:120px 20px;
+}
+
+.verify h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.server-id-label{
+color:#bbbbbb;
+margin-top:40px;
+margin-bottom:10px;
+}
+
+.id-box{
+width:500px;
+margin:0 auto;
+background:#0c1020;
+border:1px solid rgba(255,80,0,0.4);
+border-radius:12px;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.copy-icon{
+cursor:pointer;
+font-size:18px;
+color:#ff7a3d;
+}
+
+/* FOUNDER */
+
+.founder{
+text-align:center;
+padding:120px 20px;
+}
+
+.founder h2{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.founder-card{
+width:900px;
+margin:50px auto;
+background:#0c1020;
+border:1px solid rgba(255,80,0,0.25);
+border-radius:18px;
+padding:40px;
+text-align:left;
+}
+
+.founder-top{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.founder-top img{
+height:80px;
+width:80px;
+border-radius:50%;
+}
+
+.founder-name{
+font-weight:700;
+margin-top:10px;
+}
+
+.founder-id{
+margin-top:10px;
+background:#11172b;
+padding:12px;
+border-radius:8px;
+color:#ff7a3d;
 }
 
 footer{
-    text-align:center;
-    padding:50px;
-    color:#78e5bb;
+text-align:center;
+padding:40px;
+color:#888;
 }
 </style>
 </head>
 
 <body>
 
-<nav class="navbar">
-    <div class="logo">
-        <img src="logo.gif">
-        <span>Grand Piece MM</span>
-    </div>
+<nav>
+<div class="logo">
+<img src="logo.gif">
+<span>Grand Piece MM</span>
+</div>
 
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#verification">Verification</a></li>
-        <li><a href="#team">Team</a></li>
-    </ul>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#verification">Verification</a></li>
+<li><a href="#team">Team</a></li>
+</ul>
 
-    <a href="https://discord.gg/gpotrades" target="_blank">
-        <button class="btn">Join Server</button>
-    </a>
+<a href="https://discord.gg/gpotrades" target="_blank">
+<button class="join-btn">Join Server</button>
+</a>
 </nav>
 
-<!-- HERO / ABOUT -->
 <section class="hero" id="about">
-    <h1>The Premier Destination for <br>
-        <span class="gradient-text">Grand Piece Traders</span>
-    </h1>
-
-    <p>Trade safely and connect with trusted middlemen.</p>
-
-    <div class="server-card">
-        <div class="server-left">
-            <img src="logo.gif">
-            <div>
-                <h3>Grand Piece MM</h3>
-                <p><span class="dot"></span> 5,412 Online • 30,248 Members</p>
-            </div>
-        </div>
-
-        <a href="https://discord.gg/gpotrades" target="_blank">
-            <button class="btn">Join</button>
-        </a>
-    </div>
+<h1>Verify Our <span class="highlight">Marketplace</span></h1>
+<p>Established a premium marketplace bringing together collectors, investors, and traders worldwide.</p>
 </section>
 
-<!-- VERIFICATION -->
-<section id="verification">
-    <h2>Verify Our <span class="gradient-text">Identity</span></h2>
+<section class="features">
+<div class="card">
+<h3>A Thriving Marketplace</h3>
+<p>Premium trading hub powered by thousands of active members.</p>
+</div>
 
-    <div class="info-box">
-        Server ID: 1460366527030235139
-        <button class="copy-btn" onclick="copyText('1460366527030235139')">Copy</button>
-    </div>
+<div class="card">
+<h3>Safety & Security</h3>
+<p>Strict verification system for complete peace of mind.</p>
+</div>
 
-    <div class="info-box">
-        Founder ID: 1420423555136487497
-        <button class="copy-btn" onclick="copyText('1420423555136487497')">Copy</button>
-    </div>
+<div class="card">
+<h3>Active Community</h3>
+<p>Regular events and discussions to keep the marketplace dynamic.</p>
+</div>
 </section>
 
-<!-- TEAM / FOUNDER -->
-<section id="team">
-    <h2>Our <span class="gradient-text">Founder</span></h2>
+<section class="verify" id="verification">
+<h2>Verify Our <span class="highlight">Identity</span></h2>
 
-    <div class="info-box">
-        Founder: eon
-    </div>
+<div class="server-id-label">Main Server ID</div>
+
+<div class="id-box">
+<span id="serverID">1460366527030235139</span>
+<span class="copy-icon" onclick="copyID()">📋</span>
+</div>
+</section>
+
+<section class="founder" id="team">
+<h2>Our <span class="highlight">Founder</span></h2>
+<p>The main man behind Grand Piece MM.</p>
+
+<div class="founder-card">
+<div class="founder-top">
+<img src="img.png">
+<div>
+<div class="founder-name">eon</div>
+<div class="founder-id">1420423555136487497</div>
+</div>
+</div>
+</div>
 </section>
 
 <footer>
-    © 2026 Grand Piece MM
+© 2026 Grand Piece MM
 </footer>
 
 <script>
-function copyText(text) {
-    navigator.clipboard.writeText(text);
-    alert("Copied: " + text);
+function copyID(){
+const text = document.getElementById("serverID").innerText;
+navigator.clipboard.writeText(text);
+alert("Copied Server ID");
 }
 </script>
 
