@@ -89,34 +89,44 @@
             margin: 0 auto 40px;
         }
 
-        /* SERVER STATUS BAR - RATIO & VERTICAL CENTERING FIX */
+        /* SERVER STATUS BAR - UPDATED FOR ALIGNMENT */
         .server-status-bar {
             background: rgba(12, 20, 34, 0.6);
             border: 1px solid rgba(0, 255, 153, 0.15);
             border-radius: 12px;
-            padding: 12px 18px; 
+            padding: 14px 22px; 
             display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 35px;
+            align-items: center; /* Vertical Center */
+            justify-content: space-between;
+            gap: 45px;
             margin-bottom: 55px;
             min-width: 440px;
+            position: relative;
         }
 
         .server-info { display: flex; align-items: center; gap: 14px; }
         .server-info img { width: 44px; height: 44px; border-radius: 10px; }
         
-        /* Fixed: Ensures text sits exactly in the middle of the box */
         .server-details { 
             text-align: left; 
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
-            height: 44px; 
         }
         
-        .server-details h4 { font-size: 1.05rem; font-weight: 700; line-height: 1.1; margin: 0; }
-        .server-details p { font-size: 0.8rem; color: #64748b; white-space: nowrap; margin-top: 3px; line-height: 1; }
+        .server-details h4 { 
+            font-size: 1.05rem; 
+            font-weight: 700; 
+            line-height: 1.2; /* Fixed leading */
+            margin: 0; 
+        }
+        .server-details p { 
+            font-size: 0.8rem; 
+            color: #64748b; 
+            white-space: nowrap; 
+            margin-top: 2px; 
+            line-height: 1.2; 
+        }
         
         .dot { height: 7px; width: 7px; background: var(--primary-green); border-radius: 50%; display: inline-block; margin-right: 6px; box-shadow: 0 0 8px var(--primary-green); }
 
@@ -124,12 +134,11 @@
             background: var(--primary-green);
             color: #000;
             border: none;
-            padding: 9px 24px;
+            padding: 10px 24px;
             border-radius: 8px;
             font-weight: 800;
             cursor: pointer;
             font-size: 0.88rem;
-            align-self: center;
         }
 
         .hero-btns { display: flex; justify-content: center; gap: 15px; }
@@ -206,12 +215,21 @@
         .copy-ico { cursor: pointer; transition: 0.2s; font-size: 1.1rem; opacity: 0.7; }
         .copy-ico:hover { opacity: 1; color: var(--primary-green); }
 
+        .watermark {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            font-size: 0.6rem;
+            color: rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+        }
+
         footer { padding: 80px 20px; text-align: center; color: #475569; font-size: 0.85rem; }
 
         @media (max-width: 900px) {
             .features-grid { flex-direction: column; }
             .server-status-bar { flex-direction: column; width: 100%; min-width: auto; gap: 15px; padding: 18px; }
-            .server-details { text-align: center; height: auto; }
+            .server-details { text-align: center; }
         }
     </style>
 </head>
@@ -219,7 +237,7 @@
 
     <nav>
         <div class="logo">
-            <img src="logo.gif">
+            <img src="logo.gif" alt="Logo">
             <span>Grand Piece MM</span>
         </div>
         <ul class="nav-links">
@@ -231,18 +249,19 @@
     </nav>
 
     <section class="hero" id="about">
-        <h1>The Premire Destination for <br><span class="highlight">Elite Traders</span></h1>
-        <p>Established a premium marketplace bringing together collectors, investors, and traders worldwide.</p>
+        <h1>The Premiere Destination for <br><span class="highlight">Elite Traders</span></h1>
+        <p>A premium marketplace bringing together collectors, investors, and traders worldwide.</p>
 
         <div class="server-status-bar">
             <div class="server-info">
-                <img src="logo.gif">
+                <img src="logo.gif" alt="Server Icon">
                 <div class="server-details">
                     <h4>Grand Piece MM</h4>
                     <p><span class="dot"></span> 5,412 Online • 30,248 Members</p>
                 </div>
             </div>
             <button class="mini-btn" onclick="window.open('https://discord.gg/gpotrades')">Join</button>
+            <div class="watermark">trytomb</div>
         </div>
 
         <div class="hero-btns">
@@ -290,7 +309,7 @@
 
         <div class="founder-card">
             <div class="founder-top">
-                <img src="img.png">
+                <img src="img.png" alt="Founder">
                 <div class="founder-info">
                     <h3>eon</h3>
                 </div>
